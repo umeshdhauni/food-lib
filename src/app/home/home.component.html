@@ -7,13 +7,14 @@
             <div class="yellow-plate">
                 <div class="simple-plate">
                     <div class="inner-plate">
+                        <img src="../../assets/dish5.svg" class="fw"/>
                     </div>
                 </div>
             </div>
             <div class="red-plate">
                 <div class="simple-plate">
                     <div class="inner-plate">
-
+                        <img src="../../assets/dish4.svg" class="fw"/>
                     </div>
                 </div>
             </div>
@@ -26,7 +27,7 @@
                     <div class="plate">
                     </div>
                     <div class="dish">
-                        <img src="../../assets/Group 243.svg" class="dish-img" />
+                        <img [src]="'../../assets/'+img?.src" [class]="'dish-img dish'+img.index" />
                     </div>
                 </div>
             </div>
@@ -39,6 +40,12 @@
         </div>
     </div>
     <div class="footer-plate">
+        <div class="flex-justify">
+            <div>
 
+            </div>
+            <div>
+            </div>
+        </div>
     </div>
 </div>
