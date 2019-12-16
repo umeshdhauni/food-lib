@@ -20,10 +20,14 @@ export class HomeComponent implements OnInit {
   cycle(i) {
     
     setTimeout(() => {
-      this.img = {
-        src:this.allImages[i],
-        index:i
-      }
+      document.getElementById('dishAnimate').classList.remove('animate');
+      setTimeout(() =>{
+        document.getElementById('dishAnimate').classList.add('animate');
+        this.img = {
+          src:this.allImages[i],
+          index:i
+        }
+      },300)
       i++;
       if (i > 5) {
         i = 0;
