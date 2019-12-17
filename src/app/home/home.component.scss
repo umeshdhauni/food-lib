@@ -31,10 +31,17 @@
             }
             .main-heading{
                 font-size: 5rem;
+                transform: translateY(-60px);
+                opacity: 0;
+                animation: translateText 1s forwards;                
             }
             .main-text{
                 font-size: 1.2rem;
                 text-align: justify;
+                opacity: 0;
+                transform: translateY(20px);
+                animation: visibleText 1s forwards;  
+                animation-delay: 0.7s;
             }
         }
         .plate-div{
@@ -83,7 +90,7 @@
     border: none;
     background-color: #c35353;
     color: white;
-    border-radius: 30px;
+    border-radius: 5px;
 }
 
 
@@ -93,30 +100,14 @@
     margin: 0;
 }
 
-@keyframes plateRotate {
-    0%   {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(359deg);
-    }
-  }
 
-  @keyframes dish {
-    0%   {
-        transform: scale(0.2);
-        opacity: 0.5;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-  }
 
   .red-plate{
     position: relative;
-    left: 120px;
     top: 20px;
+    left:250px;
+    animation: plateOne 1s forwards;
+    animation-delay: 1.5s;
   }
   .simple-plate{
     // animation: plateRotate 10s infinite linear;
@@ -140,8 +131,128 @@
 
   .yellow-plate{
     position: relative;
-    top: -120px;
+    top:-250px;
+    animation: plateTwo 1s forwards;
+    animation-delay: 1s;
       .inner-plate{
         // background-color: #e4e054 !important;
       }
+  }
+
+  .part{
+      padding:2rem 10%;
+      .hover-div{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding:2rem;
+       border-radius: 7px;
+       position: relative;
+       overflow: hidden;
+       .dot{
+           position: absolute;
+           width: 30px;
+           height: 30px;
+           border-radius: 100%;
+           background-color: #dc4d4d94;
+           left: 20px;
+           bottom: 20px;
+           transition: 1s;
+       }
+       .dot-right{
+           right:20px;
+           left:auto !important;
+           background-color: #49ab74a6;
+       }
+       img{
+           width: 60%;
+           position: relative;
+           z-index: 2;
+       }     
+      }
+      .item-div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding:2rem;
+          height: 100%;
+      }
+  }
+
+  .order-btn{
+      border: none;
+      padding:8px 20px;
+      border-radius: 5px;
+      background-color: #42b575;
+      color: white;
+  }
+
+  .one-part{
+      cursor: pointer;
+      padding:2rem 0;
+  }
+
+  .one-part:hover{
+    .dot{
+        transform: scale(70);
+    }
+  }
+
+  @keyframes plateOne {
+    0%   {
+        left:250px;
+    }
+    100% {
+    left: 120px;
+    }
+  }
+
+  @keyframes plateTwo {
+    0%   {
+        top:-250px;
+    }
+    100% {
+    top: -120px;
+    }
+  }
+
+@keyframes plateRotate {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+  }
+
+  @keyframes dish {
+    0%   {
+        transform: scale(0.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+
+  @keyframes translateText {
+    0%   {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+
+  @keyframes visibleText {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
   }
