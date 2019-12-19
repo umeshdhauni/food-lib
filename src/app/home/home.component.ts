@@ -10,7 +10,8 @@ export class HomeComponent implements OnInit {
     src:'dish6.svg',
     index:5
   };
-  allImages = ['dish1.svg','dish2.svg','dish3.svg','dish4.svg','dish5.svg','dish6.svg']
+  allImages = ['dish1.svg','dish2.svg','dish3.svg','dish4.svg','dish5.svg','dish6.svg'];
+  
   constructor() { }
 
   ngOnInit() {

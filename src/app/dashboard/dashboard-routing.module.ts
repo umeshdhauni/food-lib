@@ -29,7 +29,7 @@ const routes: Routes = [
         component:OrdersComponent
       },
       {
-        path:'branch-location',
+        path:'branches',
         component:BranchLocationComponent
       }
     ]
