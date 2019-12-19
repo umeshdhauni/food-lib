@@ -9,12 +9,14 @@ import { CartComponent } from './cart/cart.component';
 import { OrdersComponent } from './orders/orders.component';
 import { BranchLocationComponent } from './branch-location/branch-location.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SharedModule } from '../utils/shared/shared/shared.module';
 
 @NgModule({
   declarations: [PanelComponent, MainComponent, ItemsComponent, CartComponent, OrdersComponent, BranchLocationComponent, ProfileComponent],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }

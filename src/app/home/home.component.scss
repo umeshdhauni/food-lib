@@ -472,3 +472,27 @@
 .comment{
     line-height: 1.7rem;
 }
+
+.white-icon{
+    filter:  brightness(0) invert(1);
+}
+
+.mode{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.16);
+    z-index: 1;
+    cursor: pointer;
+    img{
+        width: 100%;
+    }
+}

@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     index:5
   };
   allImages = ['dish1.svg','dish2.svg','dish3.svg','dish4.svg','dish5.svg','dish6.svg'];
-  
+  dark_mode = false;
   constructor() { }
 
   ngOnInit() {
@@ -36,6 +36,17 @@ export class HomeComponent implements OnInit {
       this.cycle(i);
     }, 4000);
     // }
+  }
+
+  darkMode(){
+    this.dark_mode = !this.dark_mode;
+    if(this.dark_mode){
+      document.getElementsByTagName('body')[0].classList.add('dark-mode');
+
+    }
+    else{
+      document.getElementsByTagName('body')[0].classList.remove('dark-mode');
+    }
   }
 
 }
