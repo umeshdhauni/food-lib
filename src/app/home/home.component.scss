@@ -1,7 +1,6 @@
 .home{
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
 
     .header-plate{
         // height:20%;
@@ -31,17 +30,18 @@
             }
             .main-heading{
                 font-size: 5rem;
-                transform: translateY(-60px);
+                transform: translateX(80px);
                 opacity: 0;
                 animation: translateText 1s forwards;                
+                animation-delay: 0.3s;
             }
             .main-text{
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 text-align: justify;
                 opacity: 0;
-                transform: translateY(20px);
-                animation: visibleText 1s forwards;  
-                animation-delay: 0.7s;
+                transform: translateX(80px);
+                animation: translateText 1s forwards;                 
+                animation-delay: 0.3s;
             }
         }
         .plate-div{
@@ -51,6 +51,8 @@
             height: 100%;
             position: relative;
             border-radius: 100%;
+            transform: translateX(-80px);
+            animation: translateText 1s forwards;                 
         }
         .plate{
             border-radius: 100%;
@@ -88,9 +90,14 @@
 .dish-btn{
     padding:12px 25px;
     border: none;
-    background-color: #c35353;
+    background-color: #42b575;
     color: white;
-    border-radius: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transform: translateX(80px);
+    animation: translateText 1s forwards;  
+    animation-delay: 0.3s;
+              
 }
 
 
@@ -142,6 +149,7 @@
   .part{
       padding:2rem 10%;
       .hover-div{
+          margin:2rem;
        display: flex;
        align-items: center;
        justify-content: center;
@@ -168,6 +176,7 @@
            width: 60%;
            position: relative;
            z-index: 2;
+           transition: 0.5s;
        }     
       }
       .item-div{
@@ -179,13 +188,7 @@
       }
   }
 
-  .order-btn{
-      border: none;
-      padding:8px 20px;
-      border-radius: 5px;
-      background-color: #42b575;
-      color: white;
-  }
+ 
 
   .one-part{
       cursor: pointer;
@@ -195,6 +198,9 @@
   .one-part:hover{
     .dot{
         transform: scale(70);
+    }
+    img{
+    animation: rotate30 1s forwards;
     }
   }
 
@@ -238,21 +244,174 @@
 
   @keyframes translateText {
     0%   {
-        transform: translateY(-60px);
         opacity: 0;
     }
     100% {
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 1;
     }
   }
 
-  @keyframes visibleText {
+  @keyframes rotate30 {
     0%   {
-        opacity: 0;
+        
     }
     100% {
-        opacity: 1;
-        transform: translateY(0px);
+        transform: rotate(30deg);
     }
+  }
+
+.our-story{
+    padding:3rem;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #e0e0e09e;
+    position: relative;
+    div{
+        width: 60%;
+        img{
+            height: 100px;
+            margin-bottom: 2rem;
+        }
+        p{
+            margin-bottom: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    .img1,.img2,.img3{
+        position: absolute;
+        height: 50px;
+    }
+    .img1{
+        bottom: 4rem;
+        left: 4%;
+        transform: rotate(45deg);
+    }
+    .img2{
+        top: 10%;
+        right: 10%;
+        transform: rotate(45deg);
+    }
+    .img3{
+        bottom: 2rem;
+        right: 2rem;
+        transform: rotate(-20deg);
+    }
+}
+
+.testimonials{
+    padding:3rem;
+    min-height: 300px;
+}
+
+.footer{
+    background-color: #313131;
+    // display: flex;
+    // align-items: center;
+    color: #c1c1c1;
+    .form-div{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .social{
+        display: flex;
+        align-items: center;
+        img{
+            height: 30px;
+            // margin: 0 0.7rem;
+            margin-right: 0.9rem;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.feedback-form{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        text-align: center;
+        // width: 40%;
+        input,textarea{
+            width: 100%;
+            margin: 0.7rem 0;
+            border:none;
+            border-bottom: 1.3px solid #e0e0e0;
+            padding: 10px 0;
+            background-color: transparent;
+            color: white;
+        }
+        
+        .submit-btn{
+            margin-top: 1rem;
+        }
+    }
+}
+
+.hand-img{
+    // position: relative;
+    img{
+        width: 100%;
+        // position: absolute;
+        // top: -44px;
+        // transform: scale(1.2);
+    }
+}
+
+.animation-div{
+    img{
+        height: 50px;
+        // margin: 0 1rem;
+        // margin-bottom: -10px;
+        position: relative;
+        opacity: 0;
+    }
+    .a1{
+        margin-bottom: -10px;
+        animation: jumpgo 7s linear infinite;
+        animation-delay: 1.4s;
+    }
+    .a2{
+        animation: jumpgo 7s linear infinite;
+        animation-delay: 1s;
+    }
+    .a3{
+        animation: jumpgo 7s linear infinite;
+        animation-delay: 0.6s;
+    }
+    .a4{
+        animation: jumpgo 7s linear infinite;
+        animation-delay: 0.2s;
+    }
+}
+
+@keyframes jumpgo {
+    0%   { left:-2%;top: 0;opacity: 0.5; }
+  5%   { left:5%;top: -30px;opacity: 1; }
+  10%  { left:10%; top:0px; }
+  15%  { left:15%; top:-40px;}
+  20%  { left:20%;  top:0px;}
+  25%  { left:25%; top:-20px;}
+  30%  { left:30%;  top:0px;}
+  35%  { left:35%; top:-30px;}
+  40%  { left:40%;  top:0px;}
+  45%  { left:45%; top:-40px;}
+  50%  { left:50%;  top:0px;}
+  55%  { left:55%; top:-20px;}
+  60%  { left:60%;  top:0px;}
+  65%  { left:65%;  top:-30px;}
+  70%  { left:70%;  top:0px;}
+  75%  { left:75%; top:-40px;}
+  80%  { left:80%; top:0px;}
+  85%  { left:85%; top:-50px;}
+  90%  { left:90%;  top:0px;}
+  95%  { left:95%; top:-20px;}
+  100% { left:100%;  top:0px;opacity: 1;}
   }

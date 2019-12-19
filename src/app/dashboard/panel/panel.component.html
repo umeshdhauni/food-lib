@@ -1,3 +1,53 @@
-<p>
-  panel works!
-</p>
+<div class="container-height">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async)?.matches ? 'over' : 'side'" [opened]="!(isHandset$ | async)?.matches">
+
+      <mat-nav-list>
+        <div class="menu-list">
+          <div mat-list-item routerLink="" class="menu-list-item" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <span class="iconify" data-icon="mdi:lightbulb-outline" data-inline="false"></span>
+            <div>
+              <p class="menu-item-text"><b>Home</b></p>
+            </div>
+          </div>
+          <div mat-list-item routerLink="/items" class="menu-list-item" routerLinkActive="active">
+            <span class="iconify" data-icon="uil:notes" data-inline="false"></span>
+            <div>
+              <p class="menu-item-text"><b>Items</b></p>
+            </div>
+          </div>
+          <div mat-list-item routerLink="/cart" class="menu-list-item" routerLinkActive="active">
+            <span class="iconify" data-icon="uil:notes" data-inline="false"></span>
+            <div>
+              <p class="menu-item-text"><b>Cart</b></p>
+            </div>
+          </div>
+          <div mat-list-item routerLink="/orders" class="menu-list-item" routerLinkActive="active">
+            <span class="iconify" data-icon="uil:notes" data-inline="false"></span>
+            <div>
+              <p class="menu-item-text"><b>Your Orders</b></p>
+            </div>
+          </div>
+          <div mat-list-item routerLink="/branch-location" class="menu-list-item" routerLinkActive="active">
+            <span class="iconify" data-icon="uil:notes" data-inline="false"></span>
+            <div>
+              <p class="menu-item-text"><b>Branch near you</b></p>
+            </div>
+          </div>
+
+        </div>
+      </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+      <div class="padding">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
