@@ -2,7 +2,8 @@
     <div class="header-plate">
         <div class="flex-justify">
             <div>
-                <img src="../../assets/logo.svg" class="logo">
+                <img src="../../assets/logo.svg" class="logo" *ngIf="!dark_mode">
+                <img src="../../assets/logo-in.svg" class="logo" *ngIf="dark_mode">
             </div>
             <div class="yellow-plate">
                 <div class="simple-plate">
