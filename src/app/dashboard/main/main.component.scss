@@ -6,9 +6,7 @@
     overflow: scroll;
 }
 
-.data.col{
-    overflow: scroll;
-}
+
 
 .row {
     width: 100%;
@@ -72,4 +70,56 @@
 .categories-list{
     display: flex;
     overflow-x: auto;
+}
+
+.popular{
+    padding-bottom:2rem;
+}
+
+.dish-plate{
+    position: relative;
+    z-index: 1;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .plate{
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  background-color: white;
+  box-shadow: 6px 9px 1px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  img{
+    height: 80%;
+  }
+    }
+}
+
+.dish{
+    height: 160px;
+    position: relative;
+    top: -75px;
+    padding:91px 1rem 1rem 1rem !important;
+    margin-bottom: -30px;
+}
+
+.star{
+    width: 10px;
+    margin-right: 5px;
+    position: relative;
+    top: -1.5px;
+}
+
+.price-circle{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a2a2a2;
+    color: white;
+    border-radius: 100%;
 }

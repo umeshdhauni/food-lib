@@ -39,12 +39,43 @@
             <div class="category-item" *ngFor="let category of allCategories">
               <div>
                 <div class="cat-circle">
-                  <img src="../../../assets/food.svg" />
+                  <img [src]="'../../../assets/'+category?.image" />
                 </div>
-                <p>All</p>
+                <p>{{category?.name}}</p>
               </div>
             </div>
             
+          </div>
+        </div>
+      </div>
+      <div class="popular">
+        <div>
+          <div>
+            <h5>Popular this week</h5>
+          </div>
+          <div class="mt-4 dish-list">
+            <div class="row">
+              <div class="col-md-4" *ngFor="let dish of allDishes">
+                <div>
+                  <div class="dish-plate">
+                    <div class="plate">
+                      <img src="../../../assets/dish1.svg" />
+                    </div>
+                  </div>
+                  <div class="m-card dish">
+                    <div class="flex-justify-align">
+                      <div >
+                        <small class="flex-align"><img src="../../../assets/star.svg" class="star"/><span>4</span></small>
+                        <p class="mb-0"><b>Special</b><br> Rice Bowl</p>
+                      </div>
+                      <div class="price-circle">
+                        <span class="b">$20</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
