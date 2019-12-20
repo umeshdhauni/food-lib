@@ -59,20 +59,15 @@
         align-items: center;
         justify-content: center;
         border-radius: 100%;
-        border: 1px solid #efefef;
+        // border: 1px solid #efefef;
+        box-shadow: 0px 4px 4px #cacaca;
         img{
             height: 50%;
         }
     }
 }
 
-.category-item:hover{
-    background-color: #1e2025;
-    color: #ffffff;
-    .cat-circle{
-        background-color: white;
-    }
-}
+
 
 .categories-list{
     display: flex;
