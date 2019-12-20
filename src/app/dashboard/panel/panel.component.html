@@ -3,37 +3,44 @@
     <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async)?.matches ? 'over' : 'side'" [opened]="!(isHandset$ | async)?.matches">
-
+      <div class="logo">
+        <img src="../../../assets/logo.svg" />
+      </div>
       <mat-nav-list>
         <div class="menu-list">
-          <div mat-list-item routerLink="" class="menu-list-item" routerLinkActive="active"
+          <div mat-list-item routerLink="/dashboard" class="menu-list-item" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
-            
+            <div class="circle"></div>
             <div>
+              <img src="../../../assets/store.svg"  class="icon" />
               <p class="menu-item-text">Home</p>
             </div>
           </div>
-          <div mat-list-item routerLink="/items" class="menu-list-item" routerLinkActive="active">
-            
+          <div mat-list-item routerLink="/dashboard/items" class="menu-list-item" routerLinkActive="active">
+            <div class="circle"></div>
             <div>
-              <p class="menu-item-text">Items</p>
+              <img src="../../../assets/food.svg"  class="icon" />
+              <p class="menu-item-text">Menu items</p>
             </div>
           </div>
-          <div mat-list-item routerLink="/cart" class="menu-list-item" routerLinkActive="active">
-            
+          <div mat-list-item routerLink="/dashboard/cart" class="menu-list-item" routerLinkActive="active">
+            <div class="circle"></div>
             <div>
+              <img src="../../../assets/cart.svg"  class="icon" />
               <p class="menu-item-text">Cart</p>
             </div>
           </div>
-          <div mat-list-item routerLink="/orders" class="menu-list-item" routerLinkActive="active">
-            
+          <div mat-list-item routerLink="/dashboard/orders" class="menu-list-item" routerLinkActive="active">
+            <div class="circle"></div>
             <div>
-              <p class="menu-item-text">Your Orders</p>
+              <img src="../../../assets/scooter.svg"  class="icon" />
+              <p class="menu-item-text">Orders</p>
             </div>
           </div>
-          <div mat-list-item routerLink="/branches" class="menu-list-item" routerLinkActive="active">
-            
+          <div mat-list-item routerLink="/dashboard/branches" class="menu-list-item" routerLinkActive="active">
+            <div class="circle"></div>
             <div>
+              <img src="../../../assets/pin.svg"  class="icon" />
               <p class="menu-item-text">Branches</p>
             </div>
           </div>
@@ -43,7 +50,7 @@
 
     </mat-sidenav>
     <mat-sidenav-content>
-
+      <app-header></app-header>
       <div class="padding">
         <router-outlet></router-outlet>
       </div>

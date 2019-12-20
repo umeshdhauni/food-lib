@@ -1,31 +1,50 @@
 
 .menu-list-item.active{
     // background-color: #feefc3;
-    background-color: #c5fdd9;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
+    font-weight: 500;
+    .circle{
+      display: block;
+    }
 }
 
 .menu-list-item{
     display: flex;
     cursor: pointer;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     min-height: 40px;
-    margin:10px 0;
-    padding:8px 24px;
-    .iconify{
-        font-size: 24px;
+    padding: 12px 10px;
+    position: relative;
+    .icon{
+       height: 26px;
+       margin-bottom: 0.5rem;
+    }
+    .circle{
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background-color: #42b575;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      transition: 0.5s;
+      display: none;
     }
     p{
         margin-bottom: 0;
     }
     .menu-item-text{
-        margin-left: 40px !important
+        // margin-left: 40px !important
     }
 }
 
 .menu-list-item:focus{
     outline: none;
+}
+
+.menu-list{
+  padding:3rem 0;
 }
 
 .example-toolbar{
@@ -41,7 +60,7 @@ align-items: center;
 .logo {
   text-align:center;
   img{
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -55,15 +74,15 @@ align-items: center;
 // new sidenav
 .sidenav-container {
   height: 100%;
-  background-color: #ffffff94;
+  background-color: #DEE8FD;
 }
 
 .sidenav {
-    width: 300px;
+    width: 120px;
   background-color: white;
   // color:white;
   padding:15px 0px;
-  border-color :white !important
+  border:none !important
 }
 
 .sidenav .mat-toolbar {
@@ -90,4 +109,7 @@ align-items: center;
 }
 
 
-
+.padding{
+  padding:3rem;
+  height: calc(100% - 70px);
+}
