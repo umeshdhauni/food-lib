@@ -257,6 +257,7 @@
 </div>
 
 <div class="mode" (click)="darkMode()">
-    <img src="../../assets/lightbulb.svg" />
+    <img src="../../assets/lightbulb.svg" *ngIf="!dark_mode" />
+    <img src="../../assets/lightbulb-b.svg" *ngIf="dark_mode" />
 </div>
 

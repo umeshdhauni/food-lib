@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     index:5
   };
   allImages = ['dish1.svg','dish2.svg','dish3.svg','dish4.svg','dish5.svg','dish6.svg'];
-  dark_mode = false;
+  dark_mode = true;
   constructor() { }
 
   ngOnInit() {
