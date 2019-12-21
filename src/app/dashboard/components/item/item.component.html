@@ -1,4 +1,4 @@
-<div>
+<div class="complete-dish">
     <div class="dish-plate">
       <div class="plate">
         <img [src]="'../../../../assets/'+ dish?.image" />
@@ -8,10 +8,11 @@
       <div class="flex-justify-align">
         <div >
           <small class="flex-align"><img src="../../../../assets/star.svg" class="star"/><span>{{dish?.rating}}</span></small>
-          <p class="mb-0"><b>{{dish?.tag}}</b><br>{{dish?.name}}</p>
+          <p class="mb-0 b">{{dish?.name}}</p>
+          <p>${{dish?.price}}</p>
         </div>
         <div class="price-circle">
-          <span class="b">${{dish?.price}}</span>
+          <span class="plus-sign">+</span>
         </div>
       </div>
     </div>

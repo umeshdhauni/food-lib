@@ -38,7 +38,7 @@
             <h5>Categories</h5>
           </div>
           <div class="mt-4 categories-list">
-            <div class="category-item" *ngFor="let category of allCategories">
+            <div class="category-item" *ngFor="let category of allCategories" (click)="categoryItem(category)">
               <div>
                 <div class="cat-circle">
                   <img [src]="'../../../assets/'+category?.image" />

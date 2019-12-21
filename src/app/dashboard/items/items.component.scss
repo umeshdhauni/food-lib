@@ -1,0 +1,27 @@
+.sort-img{
+    height:1rem;
+}
+
+.all-category{
+    // padding:1rem;
+    .single-category{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding:0.8rem 1rem;
+        p{
+            margin-bottom: 0 !important;
+        }
+    }
+    .single-category:hover{
+        background-color: #f5f5f5;
+    }
+}
+
+.category-icon{
+    margin-left: 0.5rem;
+    height: 28px;
+    position: relative;
+    top:-3px;
+}

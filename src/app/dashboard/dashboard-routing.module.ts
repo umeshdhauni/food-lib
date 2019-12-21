@@ -21,6 +21,10 @@ const routes: Routes = [
         component:ItemsComponent
       },
       {
+        path:'items/:category',
+        component:ItemsComponent
+      },
+      {
         path:'cart',
         component:CartComponent
       },

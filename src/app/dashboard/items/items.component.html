@@ -1,1 +1,22 @@
-<p>items works!</p>
+<div>
+    <div class="flex-justify-align">
+        <h4 >Menu Items <span *ngIf="category"><span class="slash">/</span><span> {{category?.name}} <img [src]="'../../../assets/' + category.image" class="category-icon" /></span></span></h4>
+        <div>
+            <p [matMenuTriggerFor]="menu" class="cursor">{{category?category?.name:'Sort'}} <img src="../../../assets/sort.svg" class="ml-2 sort-img" /></p> 
+            <mat-menu #menu="matMenu" class="category-menu">
+                <div class="all-category">
+                    <div class="single-category" *ngFor="let scategory of allCategories" (click)="categoryItem(scategory)">
+                        <p>{{scategory?.name}}</p>
+                        <p>{{scategory?.count}}</p>
+                    </div>
+                </div>
+              </mat-menu>
+        </div>
+       
+    </div>
+    <div class="row mt-4">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" *ngFor="let dish of allDishes">
+          <app-item [dish]="dish"></app-item>
+        </div>
+      </div>
+</div>
