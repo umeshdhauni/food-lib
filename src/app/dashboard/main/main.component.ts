@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
     image:'noodles.svg'
   },
   {
-    name:'Drinks',
+    name:'Beverages',
     image:'beer.svg'
   },
   {

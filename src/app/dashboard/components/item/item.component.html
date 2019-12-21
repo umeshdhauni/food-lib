@@ -1,0 +1,18 @@
+<div>
+    <div class="dish-plate">
+      <div class="plate">
+        <img [src]="'../../../../assets/'+ dish?.image" />
+      </div>
+    </div>
+    <div class="m-card dish" [ngStyle]="{'background-color':dishColor?dishColor:'white'}">
+      <div class="flex-justify-align">
+        <div >
+          <small class="flex-align"><img src="../../../../assets/star.svg" class="star"/><span>{{dish?.rating}}</span></small>
+          <p class="mb-0"><b>{{dish?.tag}}</b><br>{{dish?.name}}</p>
+        </div>
+        <div class="price-circle">
+          <span class="b">${{dish?.price}}</span>
+        </div>
+      </div>
+    </div>
+  </div>

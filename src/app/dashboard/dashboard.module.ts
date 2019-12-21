@@ -11,13 +11,18 @@ import { BranchLocationComponent } from './branch-location/branch-location.compo
 import { ProfileComponent } from './profile/profile.component';
 import { SharedModule } from '../utils/shared/shared/shared.module';
 import { HeaderComponent } from './header/header.component';
+import { ItemComponent } from './components/item/item.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
-  declarations: [PanelComponent, MainComponent, ItemsComponent, CartComponent, OrdersComponent, BranchLocationComponent, ProfileComponent, HeaderComponent],
+  declarations: [PanelComponent, MainComponent, ItemsComponent, CartComponent, OrdersComponent, BranchLocationComponent, ProfileComponent, HeaderComponent, ItemComponent, SearchComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule
+  ],
+  entryComponents:[
+    SearchComponent
   ]
 })
 export class DashboardModule { }

@@ -1,0 +1,19 @@
+<div class="search-modal">
+    <div class="flex-end">
+        <img src="../../../../assets/cancel.svg" class="close-icon" (click)="close()"/>
+    </div>
+    <div class="flex-center">
+        <div class="search-bar">
+            <input placeholder="Search Item..." type="text"/>
+        </div>
+        
+    </div>
+    <div class="dish-row">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" *ngFor="let dish of allDishes">
+             
+              <app-item [dish]="dish" [dishColor]="'#DEE8FD'"></app-item>
+            </div>
+          </div>
+    </div>
+</div>
