@@ -1,10 +1,23 @@
 <div class="header">
     <div class="flex-justify-align">
         <div class="search">
+            <img src="../../../assets/search.svg" />
             <input placeholder="Search items..." type="text" (click)="openSearchDialog()"/>
         </div>
         <div class="profile flex-align">
-            <img src="../../../assets/not.svg" class="notification" />
+            <div>
+                <img src="../../../assets/not.svg" class="notification cursor" [matMenuTriggerFor]="menu" />
+                <mat-menu #menu="matMenu" class="noti-menu">
+                    <div class="noti-div" *ngFor="let notification of allNotifications">
+                        <div class="not-text">
+                            <p>{{notification?.title}}</p>
+                        </div>
+                        <div class="time">
+                            <p class="light">{{notification?.time}} min ago</p>
+                        </div>
+                    </div>
+                  </mat-menu>
+            </div>
             <span class="ml-3 b">Umesh Dhauni</span>
             <img src="../../../assets/profile2.jpe" class="profile-img" />
         </div>

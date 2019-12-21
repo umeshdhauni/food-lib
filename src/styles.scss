@@ -104,4 +104,21 @@ p{
 .category-menu{
       min-width: 160px !important;
       color: black;
+      .mat-menu-content{
+        padding:0 !important
+      }
+}
+
+.noti-menu{
+  min-width: 400px !important;
+  max-width: 400px !important;
+  color: black;
+  .mat-menu-content{
+    padding:0 !important
+  }
+
+}
+
+.light{
+  color: #a9a9a9
 }

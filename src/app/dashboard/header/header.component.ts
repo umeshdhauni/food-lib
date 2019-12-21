@@ -8,7 +8,18 @@ import { SearchComponent } from '../components/search/search.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  allNotifications=[{
+    title:'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying',
+    time:'1'
+  },
+  {
+    title:'Sameer is assigned to your order #ODR20',
+    time:'2'
+  },
+  {
+    title:'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying',
+    time:'5'
+  }];
   constructor(
     private dialog:MatDialog
   ) { }
