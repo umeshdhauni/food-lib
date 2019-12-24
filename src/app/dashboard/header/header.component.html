@@ -19,7 +19,10 @@
                   </mat-menu>
             </div>
             <span class="ml-3 b">Umesh Dhauni</span>
-            <img src="../../../assets/profile2.jpe" class="profile-img" />
+            <img src="../../../assets/profile2.jpe" class="profile-img cursor" [matMenuTriggerFor]="logout" />
+            <mat-menu #logout="matMenu">
+                <button mat-menu-item>Logout</button>
+              </mat-menu>
         </div>
     </div>
 </div>
