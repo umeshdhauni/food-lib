@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
-
+  selectedDate= new Date();
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

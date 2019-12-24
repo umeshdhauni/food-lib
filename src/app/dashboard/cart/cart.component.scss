@@ -1,0 +1,102 @@
+.count-icon{
+    padding:3px 15px;
+    border: 1px solid #0e0e0e2b;
+    margin: 0 1rem;
+    border-radius: 3px;
+}
+
+.row{
+    width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.dish-image-td{
+    width: 140px;
+}
+
+.plate{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+background-color: white;
+box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+img{
+height: 80%;
+}
+}
+
+.cancel{
+    width: 15px;
+    cursor: pointer;
+}
+
+.cart-table{
+    width: 100%;
+    tr{
+        border-bottom: 1px solid #e8e8e8bf;
+        td{
+            padding:1rem;
+            
+        }
+    }
+}
+
+.checkout{
+    margin-top: 1.5rem;
+    .order-btn{
+        width: 100%;
+        padding:0.7rem 2rem;
+    }
+}
+
+.cart-card{
+    width: 95%;
+}
+
+.w3{
+    width: 30%;
+}
+
+.debit-card{
+    // height: 170px;
+    margin: 2.5rem 0;
+    position: relative;
+    .d-card{
+        color: white;
+        // background-color: #777777;
+        background-color: #35008c;
+        position: relative;
+        left:-4.5rem;
+        width: 100%;
+        padding:1rem;
+        border-radius: 5px;
+        height: 100%;
+        // box-shadow: 4px 8px 1px rgba(0, 0, 0, 0.16);
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.16);
+        .visa-img{
+            img{
+                height: 50px;
+            }
+        }
+        .card-number{
+            padding:1rem 0;
+        }
+    }
+
+    .card-type{
+        position: absolute;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        top: 0;
+        img{
+            height: 50px;
+        }
+    }
+}

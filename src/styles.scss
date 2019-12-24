@@ -122,3 +122,31 @@ p{
 .light{
   color: #a9a9a9
 }
+
+
+ .white-input .mat-form-field-underline {
+  /*change color of underline*/
+  // background-color: #d6d6d6 !important;
+} 
+
+.white-input .mat-form-field-label{
+  // color: #d6d6d6 !important;
+  font-size: 90%;
+}
+.white-input input{
+  // color: white;
+}
+
+.white-input .mat-select-arrow{
+  // color: #d6d6d6 !important; 
+}
+
+.bl{
+  color: #007bff;
+}
+
+.filter-calendar{
+  .mat-calendar-header{
+      padding:0 !important
+  }
+}

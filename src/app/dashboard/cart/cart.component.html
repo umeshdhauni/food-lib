@@ -1,1 +1,135 @@
-<p>cart works!</p>
+<div class="fh">
+    <div class="row fh">
+        <div class="col-md-9 pl-0">
+            <div>
+                <h4>Your Cart</h4>
+            </div>
+            <div class="mt-4 m-card cart-card">
+                <table class="cart-table">
+                    <tr *ngFor="let item of allCartItems">
+                        <td class="dish-image-td">
+                            <div class="plate">
+                                <img [src]="'../../../assets/'+item.image" class="dish-img" />
+                            </div>
+                        </td>
+                        <td>
+                            <span><b>{{item?.name}}</b></span><br>
+                            <small>Curry</small>
+                        </td>
+                        <td>
+                            <div class="flex-align cursor">
+                                <span class="b">-</span>
+                                <div class="count-icon">{{item?.count}}</div>
+                                <span class="b">+</span>
+                            </div>
+                        </td>
+                        <td>
+                            <span>$ {{item?.price * item?.count}}</span>
+                        </td>
+                        <td>
+                            <img src="../../../assets/cancel.svg" class="cancel" />
+                        </td>
+                    </tr>
+                </table>
+                <div class="mt-4 flex-justify-align">
+                    <div class="bl cursor" routerLink="/dashboard/items"><small>< Continue Shopping</small></div>
+                    <h5 class="">Total: $300</h5>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-3 m-card">
+            <div class="card-details">
+                <h5>Card Details</h5>
+            </div>
+            <div class="debit-card">
+                <div class="d-card">
+                    <div class="visa-img"><img src="../../../assets/visa.svg" /></div>
+                    <div class="card-number">
+                        <p>{{form?.value?.cardNumber?form?.value?.cardNumber:'**** **** **** ****'}}</p>
+                    </div>
+                    <div class="flex-justify-align">
+                        <div class="card-name">
+                            <b>{{form?.value?.cardName?form?.value?.cardName:'Bank Customer'}}</b>
+                        </div>
+                        <div class="expiry">
+                            <small>{{form?.value?.expMonth?form?.value?.expMonth:'MM'}} / {{form?.value?.expYear?form?.value?.expYear:'YY'}}</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-type">
+                    <img src="../../../assets/mastercard.svg" />
+                </div>
+            </div>
+            <div>
+                <form [formGroup]="form">
+                    <div>
+                        <mat-form-field class="fw white-input">
+                            <mat-select placeholder="Select Bank">
+                                <mat-option>
+                                    State Bank of India
+                                </mat-option>
+                                <mat-option>
+                                    HDFC
+                                </mat-option>
+                                <mat-option>
+                                    Bank of Baroda
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field class="fw white-input">
+                            <input matInput placeholder="Name on card" formControlName="cardName">
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field class="fw white-input">
+                            <input matInput placeholder="Card Number" formControlName="cardNumber">
+                        </mat-form-field>
+                    </div>
+                    <div class="flex-justify-align">
+                        <div class="w3">
+                            <mat-form-field class="fw white-input">
+                                <mat-select placeholder="Ex. Month" formControlName="expMonth">
+                                    <mat-option val="3">
+                                        1
+                                    </mat-option>
+                                    <mat-option val="3">
+                                        2
+                                    </mat-option>
+                                    <mat-option val="3">
+                                        3
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="w3">
+                            <mat-form-field class="fw white-input">
+                                <mat-select placeholder="Ex. Year" formControlName="expYear">
+                                    <mat-option val="3">
+                                        2024
+                                    </mat-option>
+                                    <mat-option val="3">
+                                        2025
+                                    </mat-option>
+                                    <mat-option val="3">
+                                        2026
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="w3">
+                            <mat-form-field class="fw white-input">
+                                <input matInput placeholder="CVV" formControlName="cvv">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <button class="order-btn">Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
