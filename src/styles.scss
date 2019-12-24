@@ -16,7 +16,7 @@ body,html {
   @include angular-material-typography($custom-typography);
 
   .b,b{
-    font-weight: 600;
+    font-weight: 600 !important;
   }
   
   .xb{
