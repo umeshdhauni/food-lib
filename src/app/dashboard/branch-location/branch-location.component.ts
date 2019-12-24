@@ -41,11 +41,11 @@ export class BranchLocationComponent implements OnInit {
 
   initMap() {
     this.map = new google.maps.Map(this.mapElement.nativeElement, {
-      zoom: 4,
+      zoom: 5,
       disableDefaultUI: true,
       scaleControl: true,
       zoomControl: true,
-      center: { lat: 28.6403084, lng: 77.3382219 }
+      center: { lat: 19.7515572, lng: 75.6788688 }
     });
 
     this.setMarker();
