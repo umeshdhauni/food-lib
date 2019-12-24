@@ -44,7 +44,9 @@
             </div>
             <div class="debit-card">
                 <div class="d-card">
-                    <div class="visa-img"><img src="../../../assets/visa.svg" /></div>
+                    <div class="visa-img">
+                        <img src="../../../assets/mastercard.svg" />
+                    </div>
                     <div class="card-number">
                         <p>{{form?.value?.cardNumber?form?.value?.cardNumber:'**** **** **** ****'}}</p>
                     </div>
@@ -57,9 +59,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-type">
+                <!-- <div class="card-type">
                     <img src="../../../assets/mastercard.svg" />
-                </div>
+                </div> -->
             </div>
             <div>
                 <form [formGroup]="form">

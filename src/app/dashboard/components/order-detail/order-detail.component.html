@@ -1,0 +1,24 @@
+<div class="order-details">
+    
+    <div class="flex-justify-align">
+        <div>
+            <h5>Order #{{order?.no}}</h5>
+            <p>{{order?.date}}</p>
+        </div>
+        <div>
+            <img src="../../../../assets/cancel.svg" class="cancel" (click)="close()" />
+        </div>
+    </div>
+    <div class="products">
+        <div class="row">
+            <div *ngFor="let data of order?.products" class="col-md-4">
+                <app-item [dish]="data" [dishColor]="'#DEE8FD'"></app-item>
+            </div >
+        </div>
+    </div>
+    <div class="total">
+        <div class="text-right">
+            <p><b>Total Price : </b>$ {{order?.totalPrice}}</p>
+        </div>
+    </div>
+</div>

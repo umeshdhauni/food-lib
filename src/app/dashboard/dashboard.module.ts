@@ -13,16 +13,18 @@ import { SharedModule } from '../utils/shared/shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { ItemComponent } from './components/item/item.component';
 import { SearchComponent } from './components/search/search.component';
+import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 
 @NgModule({
-  declarations: [PanelComponent, MainComponent, ItemsComponent, CartComponent, OrdersComponent, BranchLocationComponent, ProfileComponent, HeaderComponent, ItemComponent, SearchComponent],
+  declarations: [PanelComponent, MainComponent, ItemsComponent, CartComponent, OrdersComponent, BranchLocationComponent, ProfileComponent, HeaderComponent, ItemComponent, SearchComponent, OrderDetailComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule
   ],
   entryComponents:[
-    SearchComponent
+    SearchComponent,
+    OrderDetailComponent
   ]
 })
 export class DashboardModule { }

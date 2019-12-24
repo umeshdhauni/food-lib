@@ -7,7 +7,7 @@
     <div class="m-card dish" [ngStyle]="{'background-color':dishColor?dishColor:'white'}">
       <div class="flex-justify-align">
         <div >
-          <small class="flex-align"><img src="../../../../assets/star.svg" class="star"/><span>{{dish?.rating}}</span></small>
+          <small class="flex-align" *ngIf="dish?.rating"><img src="../../../../assets/star.svg" class="star"/><span>{{dish?.rating}}</span></small>
           <p class="mb-0 b">{{dish?.name}}</p>
           <p>${{dish?.price}}</p>
         </div>

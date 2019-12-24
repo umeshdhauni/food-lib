@@ -1,1 +1,22 @@
-<p>branch-location works!</p>
+<div class="fh">
+    <div class="row fh">
+        <div class="col-md-8">
+            <div class="map">
+                <div #map id="map"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="m-card address-card" *ngFor="let address of addresses;let i=index">
+                <div class="flex">
+                    <div>
+                        <h1 class="icon">{{i+1}}.</h1>
+                    </div>
+                    <div>
+                        <p><b class="b">{{address?.city}}</b></p>
+                        <p>{{address?.address}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
