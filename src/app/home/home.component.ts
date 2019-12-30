@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SidebarComponent } from '../dashboard/components/sidebar/sidebar.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,9 @@ export class HomeComponent implements OnInit {
   };
   allImages = ['dish1.svg','dish2.svg','dish3.svg','dish4.svg','dish5.svg','dish6.svg'];
   dark_mode = true;
-  constructor() { }
+  constructor(
+    private dialog:MatDialog
+  ) { }
 
   ngOnInit() {
     this.cycle(0);
@@ -47,6 +51,17 @@ export class HomeComponent implements OnInit {
     else{
       document.getElementsByTagName('body')[0].classList.remove('dark-mode');
     }
+  }
+
+  sidePanel(){
+    let dialogRef = this.dialog.open(SidebarComponent, {
+      height: '100%',
+      width: '100%', 
+      panelClass:'full',
+      data:'home'     
+    });
+    dialogRef.afterClosed().subscribe(result => {
+    });
   }
 
 }

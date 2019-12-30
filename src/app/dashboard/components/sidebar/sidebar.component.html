@@ -1,0 +1,11 @@
+<div class="fh back">
+   <div class="text-right cancel-div">
+    <img src="../../../../assets/cancel.svg" class="cancel" (click)="close()" />
+   </div>
+    <div class="menus">
+        <div class="menu-item" (click)="navigate('')" [ngClass]="{'active':active == 'home'}">Home</div>
+        <div class="menu-item" (click)="navigate('auth/signup')" [ngClass]="{'active':active == 'signup'}">Signup</div>
+        <div class="menu-item" (click)="navigate('auth')" [ngClass]="{'active':active == 'login'}">Login</div>
+        <div class="menu-item" (click)="navigate('/dashboard')" [ngClass]="{'active':active == 'dashboard'}">Order</div>
+    </div>
+</div>

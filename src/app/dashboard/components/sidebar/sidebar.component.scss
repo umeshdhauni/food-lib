@@ -1,0 +1,32 @@
+.cancel{
+    height: 40px;
+    cursor: pointer;
+}
+
+.menus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 40px);
+    .menu-item{
+        font-size: 5rem;
+        font-weight: 700;
+        // text-shadow: 3px 6px 3px #828282a1;
+        // color: white;
+        position: relative;
+        cursor: pointer;
+        
+    }
+}
+
+.active{
+    text-decoration: line-through;
+}
+
+.back{
+    // background: linear-gradient(to right, #6190e8, #a7bfe8);
+    background-image: url('../../../../assets/back-side2.svg');
+    background-size: cover;
+    padding:2rem;
+}

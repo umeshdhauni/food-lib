@@ -24,7 +24,7 @@ import { OrderDetailComponent } from './components/order-detail/order-detail.com
   ],
   entryComponents:[
     SearchComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
   ]
 })
 export class DashboardModule { }
