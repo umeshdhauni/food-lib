@@ -13,9 +13,12 @@ import {
   MatSliderModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from 'src/app/dashboard/components/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SidebarComponent
+  ],
   imports: [
     CommonModule,
     MatInputModule,
@@ -43,7 +46,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatDatepickerModule,
     MatGridListModule,
-    MatSliderModule
+    MatSliderModule,
+    SidebarComponent
   ]
 })
 export class SharedModule { }

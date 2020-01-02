@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  sidebarOpen = false;
   img={
     src:'dish6.svg',
     index:5
@@ -54,14 +55,11 @@ export class HomeComponent implements OnInit {
   }
 
   sidePanel(){
-    let dialogRef = this.dialog.open(SidebarComponent, {
-      height: '100%',
-      width: '100%', 
-      panelClass:'full',
-      data:'home'     
-    });
-    dialogRef.afterClosed().subscribe(result => {
-    });
+    this.sidebarOpen = true;
+  }
+
+  closeSidebar(){
+    this.sidebarOpen = false;
   }
 
 }

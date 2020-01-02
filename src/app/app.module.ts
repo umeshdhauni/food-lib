@@ -7,13 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { SharedModule } from './utils/shared/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material';
-import { SidebarComponent } from './dashboard/components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +22,6 @@ import { SidebarComponent } from './dashboard/components/sidebar/sidebar.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[
-    SidebarComponent
-  ]
+  
 })
 export class AppModule { }

@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-
+  sidebarOpen;
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
+  }
+
+  sidePanel(){
+    this.sidebarOpen = true;
+  }
+
+  closeSidebar(){
+    this.sidebarOpen = false;
   }
 
 }

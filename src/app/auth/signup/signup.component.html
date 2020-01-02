@@ -1,3 +1,48 @@
-<p>
-  signup works!
-</p>
+<div class="auth-div">
+  <div class="row fh">
+    <div class="col-md-6">
+      <div class="login-form fh">
+        <div class="">
+          <img src="../../../assets/menu.svg" class="menu" (click)="sidePanel()" />
+          <img src="../../../assets/logo-in.svg" class="logo">
+        </div>
+        <div class="form">
+          <div class="w7">
+            <h1>Signup</h1>
+            <p>Lorem ipsum, or lipsum as it is sometimes known,<br> is dummy text as it.</p>
+            <form class="mt-4">
+              <div class="input-div">
+                <p>Name</p>
+                <input type="text"/>
+              </div>
+              <!-- <div class="input-div">
+                <p>Email</p>
+                <input type="email"/>
+              </div> -->
+              <div class="input-div">
+                <p>Phone Number</p>
+                <input type="tel"/>
+              </div>
+              <div class="input-div">
+                <p>Password</p>
+                <input type="password"/>
+              </div>
+              <div>
+                <button class="submit-btn">Sign up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 p-0">
+      <div class="clip-path">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home-sidebar" [ngClass]="{'sidebar-open':sidebarOpen}">
+  <app-sidebar [active]="'signup'" (closeSidebar)="closeSidebar()"></app-sidebar>
+</div>

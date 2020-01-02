@@ -1,8 +1,11 @@
 <div class="header">
     <div class="flex-justify-align">
-        <div class="search">
-            <img src="../../../assets/search.svg" />
-            <input placeholder="Search items..." type="text" (click)="openSearchDialog()"/>
+        <div class="flex-align flex4">
+            <!-- <img src="../../../assets/menu.svg" class="menu" (click)="sidePanel()" /> -->
+            <div class="search">
+                <img src="../../../assets/search.svg" />
+                <input placeholder="Search items..." type="text" (click)="openSearchDialog()" />
+            </div>
         </div>
         <div class="profile flex-align">
             <div>
@@ -16,13 +19,17 @@
                             <p class="light">{{notification?.time}} min ago</p>
                         </div>
                     </div>
-                  </mat-menu>
+                </mat-menu>
             </div>
             <span class="ml-3 b">Umesh Dhauni</span>
             <img src="../../../assets/profile2.jpe" class="profile-img cursor" [matMenuTriggerFor]="logout" />
             <mat-menu #logout="matMenu">
                 <button mat-menu-item>Logout</button>
-              </mat-menu>
+            </mat-menu>
         </div>
     </div>
 </div>
+
+<!-- <div class="home-sidebar" [ngClass]="{'sidebar-open':sidebarOpen}">
+    <app-sidebar [active]="'dashboard'" (closeSidebar)="closeSidebar()"></app-sidebar>
+</div> -->

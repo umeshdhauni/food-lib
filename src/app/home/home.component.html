@@ -262,3 +262,8 @@
     <img src="../../assets/lightbulb-b.svg" *ngIf="dark_mode" />
 </div>
 
+
+
+<div class="home-sidebar" [ngClass]="{'sidebar-open':sidebarOpen}">
+    <app-sidebar [active]="'home'" (closeSidebar)="closeSidebar()"></app-sidebar>
+</div>

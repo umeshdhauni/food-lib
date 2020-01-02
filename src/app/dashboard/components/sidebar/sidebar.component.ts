@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Router } from '@angular/router';
 
@@ -8,25 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  active;
+  @Input() active;
+  @Output() closeSidebar = new EventEmitter();
   constructor(
-    private dialogRef:MatDialogRef<SidebarComponent>,
-    @Inject(MAT_DIALOG_DATA) public data,
     private router:Router
   ) { 
-    this.active = this.data;
+    
   }
 
   ngOnInit() {
   }
 
   close(){
-    this.dialogRef.close();
+    this.closeSidebar.emit();
   }
 
   navigate(val){
     this.router.navigate([`/${val}`]);
-    this.dialogRef.close();
   }
 
 }

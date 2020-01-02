@@ -8,6 +8,7 @@ import { SearchComponent } from '../components/search/search.component';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  sidebarOpen;
   allNotifications=[{
     title:'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying',
     time:'1'
@@ -34,6 +35,14 @@ export class HeaderComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
     });
+  }
+
+  sidePanel(){
+    this.sidebarOpen = true;
+  }
+
+  closeSidebar(){
+    this.sidebarOpen = false;
   }
 
 }

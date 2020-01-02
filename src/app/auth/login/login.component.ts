@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  sidebarOpen;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sidePanel(){
+    this.sidebarOpen = true;
+  }
+
+  closeSidebar(){
+    this.sidebarOpen = false;
   }
 
 }
